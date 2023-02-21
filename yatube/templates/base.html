@@ -1,0 +1,22 @@
+<!-- templates/base.html -->
+<!DOCTYPE html> 
+<html lang="ru">          
+  <head>       
+  </head>
+  <body>       
+    <header>
+      {% include 'includes/header.html' %}
+    </header>
+    <main>
+      {% block title %}
+      {% include 'posts/index.html' %}
+      {% endblock %}
+      {% block content %}
+      {% include 'posts/group_list.html' %}
+      {% endblock %}
+    </main>
+    <footer class="border-top text-center py-3">
+      {% include 'includes/footer.html' %} 
+    </footer>
+  </body>
+</html>
